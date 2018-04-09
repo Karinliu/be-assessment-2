@@ -1,0 +1,85 @@
+<% include head2.ejs %>
+<header>
+        <nav>
+            <ul>
+              <li><a href="/">Index</a> </li>
+              <% if (!user) { %>
+              <li><a href="/login">Login</a> </li>
+              <% } else { %>
+              <li class="myaccount"><a  href=" /updateprofile">My Account</a> </li>
+              <% } %>
+            </ul>
+        </nav>
+    </header>
+<main>
+  <h1>Matches</h1>
+  <% for (var i = 0; i < data.length; i++) { %>
+
+      <form class="listprofiles" action="/delete/<%= data[i].id %>" method="post">
+
+      <article>
+        <% if (user) { %>
+        <fieldset class ="remove">
+          <label>
+          <input type="submit" name="delete" value='x' /></label>
+        </fieldset>
+        <% } else { %>
+        <% } %>
+        <div>
+           <img class="profilepic" src="/image/<%= data[i].id %>.jpg"alt>
+        </div><br>
+           <h2><a href="/<%= data[i].id %>"><%= data[i].name %></a></h2> <br>
+             <% if (data[i].animals === 'y') { %>
+             <img class="icon" src="/image/icon_animal.png" alt>
+             <% }else if (data[i].animals === 'm') { %>
+             <img class="icon" src="/image/icon_animal.png" alt>
+             <% } %>
+
+             <% if (data[i].drink === 'y') { %>
+             <img class="icon" src="/image/icon_drink.png" alt>
+             <% }else if (data[i].drink === 'm') { %>
+             <img class="icon" src="/image/icon_drink.png" alt>
+             <% } %>
+
+             <% if (data[i].food === 'y') { %>
+             <img class="icon" src="/image/icon_food.png" alt>
+             <% } %>
+
+             <% if (data[i].family === 'y') { %>
+             <img class="icon" src="/image/icon_kids.png" alt>
+             <% }else if (data[i].family === 'm') { %>
+             <img class="icon" src="/image/icon_kids.png" alt>
+             <% } %>
+
+             <% if (data[i].movie === 'y') { %>
+             <img class="icon" src="/image/icon_movies.png" alt>
+             <% }else if (data[i].movie === 'm') { %>
+             <img class="icon" src="/image/icon_movies.png" alt>
+             <% }%>
+
+             <% if (data[i].smoke === 'y') { %>
+             <img class="icon" src="/image/icon_smoke.png" alt>
+             <% }else if (data[i].smoke === 'm') { %>
+             <img class="icon" src="/image/icon_smoke.png" alt>
+             <% } %>
+
+             <% if (data[i].sport === 'y') { %>
+             <img class="icon" src="/image/icon_sport.png" alt>
+             <% }else if (data[i].sport === 'm') { %>
+             <img class="icon" src="/image/icon_sport.png" alt>
+             <% } %>
+
+             <% if (data[i].travel === 'y') { %>
+             <img class="icon" src="/image/icon_travel.png" alt>
+             <% }else if (data[i].travel === 'm') { %>
+             <img class="icon" src="/image/icon_travel.png" alt>
+             <% } %>
+
+    </article>
+    </form>
+  <% } %>
+</main>
+
+
+
+<% include tail.ejs %>

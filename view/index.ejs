@@ -1,0 +1,42 @@
+<% include head.ejs %>
+<header>
+        <nav>
+            <ul>
+              <li><a href="/">Index</a> </li>
+                <% if (!user) { %>
+              <li><a href="/login">Login</a> </li>
+              <% } else { %>
+              <li class="myaccount"><a  href=" /updateprofile">My Account</a> </li>
+              <% } %>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+            <img src="/image/couple.jpg" alt="couple image">
+        <form action="/profiles">
+            <fieldset>
+               <legend align="center">Vind jouw match!</legend>
+               <input type="radio" id="female" name="gender" checked>
+               <label for="female"></label>
+               <input type="radio" id="male" name="gender" >
+               <label for="male"></label>
+
+               <span>zoek</span>
+               <input type="radio" id="findfemale" name="choosegender" >
+                <label for="findfemale"></label>
+               <input type="radio" id="findmale" name="choosegender" checked>
+               <label for="findmale"></label>
+
+
+            </fieldset>
+            <button>Zoeken</button>
+        </form>
+        <form action="/makeprofile">
+            <button>Maak gratis je profiel aan!</button>
+        </form>
+    </main>
+
+
+
+<% include tail.ejs %>

@@ -1,0 +1,362 @@
+body {
+    background-color: #FF5C5C;
+    margin: 0;
+    padding: 0;
+    font-family: 'arial', 'verdana';
+}
+
+header {
+    box-shadow: 0 0.1em 0.4em 0 rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 3.5rem;
+    position: fixed;
+    background-color: #FF5C5C;
+    display: inline-block;
+    z-index: 10;
+    margin-top:-0.1rem;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+header nav ul li:nth-of-type(1) {
+    position: relative;
+    /* font: 0/0 a; */
+    background: url(./image/logo.png);
+    background-repeat: no-repeat;
+    background-size: 2.5rem;
+    width: 5rem;
+    height: 2.5rem;
+    /* flex-grow: 0.9; */
+    text-align: center;
+    margin-left: -1rem;
+    padding-top: 0.2rem;
+
+    margin-top: -0.3rem;
+}
+header nav ul li:nth-of-type(1) a {
+  color:#fff0;
+}
+
+
+header nav ul li:nth-of-type(2) {
+    position: relative;
+    background-color: #FFE5B9;
+    background-repeat: no-repeat;
+    padding: 0 1.3em;
+    height: 1.5rem;
+    margin-left: -2rem;
+    margin-right:1.5rem;
+    text-align: center;
+    padding-top: 0.2rem;
+    box-shadow: 0 0.1em 0.4em 0 rgba(0, 0, 0, .3);
+    border-radius: 0.6rem;
+}
+
+header nav ul li:nth-of-type(1):hover {
+    color: white;
+    opacity: 0.96;
+    transition: .25s;
+    transform: scale(0.97);
+}
+
+header nav ul li:nth-of-type(2) a {
+    text-decoration: none;
+    color: #FF5C5C;
+}
+
+header nav ul li:nth-of-type(2):hover {
+    color: white;
+    opacity: 0.96;
+    transition: .25s;
+    transform: scale(0.97);
+}
+
+img {
+    margin-top: 3.4rem;
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+fieldset input{
+  display:none;
+}
+
+form:nth-of-type(1) {
+    position: relative;
+    background-color: white;
+    border-radius: 0.6rem;
+    height: 15em;
+    border: none;
+    margin: 0.8em;
+    margin-top: -2em;
+}
+
+fieldset label:nth-of-type(1) {
+  display: inline-block;
+  background-image: url(./image/women.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+fieldset label:nth-of-type(2) {
+  display: inline-block;
+  background-image: url(./image/man.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+fieldset label:nth-of-type(3) {
+  display: inline-block;
+  background-image: url(./image/women.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+fieldset label:nth-of-type(4) {
+  display: inline-block;
+  background-image: url(./image/man.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+fieldset input[type="radio"]:checked+label:nth-of-type(1) {
+  background-image: url(./image/choosewomen.png);
+}
+fieldset input[type="radio"]:checked+label:nth-of-type(2) {
+  background-image: url(./image/chooseman.png);
+}
+
+
+fieldset input[type="radio"]:checked+label:nth-of-type(3) {
+  background-image: url(./image/choosewomen.png);
+}
+fieldset input[type="radio"]:checked+label:nth-of-type(4) {
+  background-image: url(./image/chooseman.png);
+}
+
+fieldset label:hover{
+  transition: .25s;
+  transform: scale(0.97);
+}
+
+main fieldset:nth-of-type(2) input {
+    width: 3rem;
+    height: 1.3rem;
+    border-radius: 0.6em;
+    border: solid 0.1em #FFC77F;
+}
+
+fieldset legend {
+    margin: 0.5em;
+    color: #FF5C5C;
+    font-size: 2em;
+}
+form:nth-of-type(1) button {
+    background-color: #FFC77F;
+    font-size: 1em;
+    color: #FF5C5C;
+    height: 1.5rem;
+    text-align: center;
+    box-shadow: 0 0.1em 0.4em 0 rgba(0, 0, 0, .3);
+    border-radius: 0.6rem;
+    border: none;
+    height: 1.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    /* margin-top: 7em; */
+}
+
+form:nth-of-type(2) button {
+    background-color: #FFE5B9;
+    font-size: 1em;
+    color: #FF5C5C;
+    height: 1.5rem;
+    text-align: center;
+    box-shadow: 0 0.1em 0.4em 0 rgba(0, 0, 0, .3);
+    border-radius: 0.6rem;
+    border: none;
+    height: 1.9rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin-top: 1em;
+}
+
+form:nth-of-type(2) {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: -2.5em;
+}
+
+button:hover {
+    color: white;
+    opacity: 0.96;
+    transition: .25s;
+    transform: scale(0.97);
+}
+
+
+
+
+/*IPAD SIZE MIN WIDTH*/
+
+@media (min-width: 30em) {
+  main{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: auto 80% auto;
+    grid-template-rows: 18em 17em 1fr;
+  }
+    img {
+        grid-column: 1/4;
+        grid-row: 1;
+        width:100%;
+
+    }
+    form:nth-of-type(1){
+      grid-column: 2/3;
+      grid-row: 2;
+      width:100%;
+      height:100%;
+      margin:0;
+    }
+    fieldset label{
+      margin: 0 1em;
+    }
+    fieldset label:nth-of-type(1) {
+      background-size:3em;
+      width:3em;
+      height:5em;
+    }
+    fieldset label:nth-of-type(2) {
+      background-size:3em;
+      width:3em;
+      height:5em;
+    }
+    fieldset label:nth-of-type(3) {
+      background-size:3em;
+      width:3em;
+      height:5em;
+    }
+    fieldset label:nth-of-type(4) {
+      background-size:3em;
+      width:3em;
+      height:5em;
+    }
+    form:nth-of-type(1) button{
+      margin-top:1em;
+      width:7em;
+      height:1.8em;
+    }
+    form:nth-of-type(2){
+      grid-column: 2;
+      grid-row: 3;
+      margin-top:-3em;
+    }
+    form:nth-of-type(2){
+      grid-column: 2/3;
+      grid-row: 3;
+    }
+    form:nth-of-type(2) button{
+      width:17em;
+      height:1.8em;
+      /* margin-top:2em; */
+    }
+}
+
+
+/*LAPTOP SIZE MIN WIDTH*/
+
+@media (min-width: 48em) {
+  body{
+    background-color:white;
+  }
+  main{
+
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 30em 1fr;
+    grid-template-rows: 9em 20em 1fr;
+  }
+  img {
+      grid-column:1/6;
+      grid-row: 1/4
+      width:100% 100%;
+      opacity: 0.8;
+  }
+  form:nth-of-type(1){
+    border:1px solid #FF5C5C;
+    grid-column: 2;
+    grid-row: 2;
+  }
+  fieldset label{
+    margin: 0 1em;
+  }
+  fieldset label:nth-of-type(1) {
+    background-size:4em;
+    width:4em;
+    height:7em;
+  }
+  fieldset label:nth-of-type(2) {
+    background-size:4em;
+    width:4em;
+    height:7em;
+  }
+  fieldset label:nth-of-type(3) {
+    background-size:4em;
+    width:4em;
+    height:7em;
+  }
+  fieldset label:nth-of-type(4) {
+    background-size:4em;
+    width:4em;
+    height:7em;
+  }
+  form:nth-of-type(1) button{
+    width:8em;
+    margin-top:2em;
+  }
+  form:nth-of-type(2){
+    grid-column: 2;
+    grid-row: 3;
+    margin-top:-3em;
+  }
+  form:nth-of-type(2) button{
+    width:20em;
+    height:2.1em;
+    /* margin-top:2em; */
+  }
+}
+
+
+  /* Bron: */
+  /* https://stackoverflow.com/questions/39386119/spacing-between-flex-elements */

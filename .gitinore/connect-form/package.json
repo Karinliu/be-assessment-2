@@ -1,0 +1,68 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "connect-form",
+        "scope": null,
+        "escapedName": "connect-form",
+        "name": "connect-form",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/karinliu/Documents/CMD/Backend/techproject"
+    ]
+  ],
+  "_defaultsLoaded": true,
+  "_engineSupported": true,
+  "_from": "connect-form@latest",
+  "_id": "connect-form@0.2.1",
+  "_inCache": true,
+  "_location": "/connect-form",
+  "_nodeVersion": "v0.4.3",
+  "_npmVersion": "0.3.15",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "connect-form",
+    "scope": null,
+    "escapedName": "connect-form",
+    "name": "connect-form",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/connect-form/-/connect-form-0.2.1.tgz",
+  "_shasum": "227fd460bcd136e3631f8875c6d8ca655b89a639",
+  "_shrinkwrap": null,
+  "_spec": "connect-form",
+  "_where": "/Users/karinliu/Documents/CMD/Backend/techproject",
+  "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+  },
+  "dependencies": {
+    "formidable": ">= 0.9.3"
+  },
+  "description": "urlencoded / multipart form parsing middleware for Connect",
+  "devDependencies": {},
+  "directories": {
+    "lib": "./lib"
+  },
+  "dist": {
+    "shasum": "227fd460bcd136e3631f8875c6d8ca655b89a639",
+    "tarball": "https://registry.npmjs.org/connect-form/-/connect-form-0.2.1.tgz"
+  },
+  "engines": {
+    "node": ">= 0.1.98"
+  },
+  "files": [],
+  "main": "./index.js",
+  "name": "connect-form",
+  "optionalDependencies": {},
+  "readme": "\n# Connect Form\n\nConnect Form is a multipart / urlencoded form parsing middleware utilizing [node-formidable](http://github.com/felixge/node-formidable) behind the scenes.\n\n## Installation\n\nvia npm:\n\n\t$ npm install connect-form\n\n## Example\n\n    var form = require('connect-form');\n    var server = connect.createServer(\n\t    form({ keepExtensions: true }),\n\t    function(req, res, next){\n\t\t    // Form was submitted\n\t        if (req.form) {\n\t\t        // Do something when parsing is finished\n\t\t        // and respond, or respond immediately\n\t\t        // and work with the files.\n\t            req.form.complete(function(err, fields, files){\n\t                res.writeHead(200, {});\n\t                if (err) res.write(JSON.stringify(err.message));\n\t                res.write(JSON.stringify(fields));\n\t                res.write(JSON.stringify(files));\n\t                res.end();\n\t            });\n\t        // Regular request, pass to next middleware\n\t        } else {\n\t            next();\n\t        }\n\t    }\n\t);",
+  "readmeFilename": "Readme.md",
+  "version": "0.2.1"
+}

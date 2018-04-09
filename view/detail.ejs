@@ -1,0 +1,94 @@
+<% include head3.ejs %>
+<header>
+        <nav>
+            <ul>
+              <li><a href="/">Index</a> </li>
+                <% if (!user) { %>
+              <li><a href="/login">Login</a> </li>
+              <% } else { %>
+              <li class="myaccount"><a  href=" /updateprofile">My Account</a> </li>
+              <% } %>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    <% if (data.id) { %>
+
+      <!-- <img alt src="/upload/ > -->
+      <%= data.profilePicture %>
+                <h1><%= data.name %></h1>
+                <form action="index.html">
+
+
+                <button></button>
+                <button></button>
+                </form>
+                <div>
+                <img class="profilepic" src="/image/<%= data.id %>.jpg" alt>
+                </div>
+
+                <article>
+                <h2>Over mij </h2>
+
+                <% if (user) { %>
+
+                  <% if (data.animals === 'y') { %>
+                  <img class="icon" src="/image/icon_animal.png" alt>
+                  <% }else if (data.animals === 'm') { %>
+                  <img class="icon" src="/image/icon_animal.png" alt>
+                  <% } %>
+
+                  <% if (data.drink === 'y') { %>
+                  <img class="icon" src="/image/icon_drink.png" alt>
+                  <% }else if (data.drink === 'm') { %>
+                  <img class="icon" src="/image/icon_drink.png" alt>
+                  <% } %>
+
+                  <% if (data.food === 'y') { %>
+                  <img class="icon" src="/image/icon_food.png" alt>
+                  <% } %>
+
+                  <% if (data.family === 'y') { %>
+                  <img class="icon" src="/image/icon_kids.png" alt>
+                  <% }else if (data.family === 'm') { %>
+                  <img class="icon" src="/image/icon_kids.png" alt>
+                  <% } %>
+
+                  <% if (data.movie === 'y') { %>
+                  <img class="icon" src="/image/icon_movies.png" alt>
+                  <% }else if (data.movie === 'm') { %>
+                  <img class="icon" src="/image/icon_movie.png" alt>
+                  <% }%>
+
+                  <% if (data.smoke === 'y') { %>
+                  <img class="icon" src="/image/icon_smoke.png" alt>
+                  <% }else if (data.smoke === 'm') { %>
+                  <img class="icon" src="/image/icon_smoke.png" alt>
+                  <% } %>
+
+                  <% if (data.sport === 'y') { %>
+                  <img class="icon" src="/image/icon_sport.png" alt>
+                  <% }else if (data.sport === 'm') { %>
+                  <img class="icon" src="/image/icon_sport.png" alt>
+                  <% } %>
+
+                  <% if (data.travel === 'y') { %>
+                  <img class="icon" src="/image/icon_travel.png" alt>
+                  <% }else if (data.travel === 'm') { %>
+                  <img class="icon" src="/image/icon_travel.png" alt>
+                  <% } %>
+
+                <p><%= data.description %></p>
+
+                <h3>Mijn kenmerk</h3>
+                <p><%= data.characteristics %></p>
+            </article>
+            <% } %>
+            </main>
+
+  <% } %>
+<% include tail.ejs %>
+
+<!-- IMAGES USED FROM https://pixabay.com/ -->

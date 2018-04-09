@@ -1,0 +1,95 @@
+<% include head2.ejs %>
+<header>
+        <nav>
+            <ul>
+              <li><a href="/">Index</a> </li>
+                <% if (!user) { %>
+              <li><a href="/login">Login</a> </li>
+              <% } else { %>
+              <li class="myaccount"><a  href=" /updateprofile">My Account</a> </li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- enctype = attribute specifies how the form-data should be encoded when submitting it to the server.  -->
+        <form action="/updateprofile" method="post">
+
+                <fieldset>
+                    <legend>Huisdieren <img class="icon" src="/image/icon_animal.png" alt="icon_animals"></legend>
+                    <img class="character" src="/image/animals.jpg" alt="animals">
+                    <input type="radio" id="animaly" value="y" name="animals">
+                    <label for="animaly">Ja</label>
+                    <input type="radio" id="animalm" value="m" name="animals">
+                    <label for="animalm">Misschien</label>
+                    <input type="radio" id="animaln" value="n" name="animals">
+                    <label for="animaln">Nee</label>
+
+
+                    <legend>Drinken <img class="icon" src="/image/icon_drink.png" alt="icon_food"></legend> <img class="character" src="/image/drink.jpg" alt="drink">
+                    <input type="radio" id="drinky" value="y" name="drink">
+                    <label for="drinky">Ja</label>
+                    <input type="radio" id="drinkm" value="m" name="drink">
+                    <label for="drinkm">Misschien</label>
+                    <input type="radio" id="drinkn" value="n" name="drink">
+                    <label for="drinkn">Nee</label>
+
+
+                    <legend>Uit eten <img class="icon" src="/image/icon_food.png" alt="icon_food"></legend> <img class="character" src="/image/dining.jpg" alt="food">
+                    <input type="radio" id="foody" value="y" name="food">
+                    <label for="foody">Ja</label>
+                    <input type="radio" id=foodm value="m" name=food>
+                    <label for="foodm">Misschien</label>
+                    <input type="radio" id="foodn"n value="n" name="food">
+                    <label for="foodn">Nee</label>
+
+                    <legend>Familie/kinderen <img class="icon" src="/image/icon_kids.png" alt="icon_kids"></legend> <img class="character" src="/image/family.jpg" alt="family">
+                    <input type="radio" id="familyy" value="y" name="family">
+                    <label for="familyy">Ja</label>
+                    <input type="radio" id="familym" value="m" name="family">
+                    <label for="familym">Misschien</label>
+                    <input type="radio" id="familyn" value="n" name="family">
+                    <label for="familyn">Nee</label>
+
+                    <legend>Films kijken <img class="icon" src="/image/icon_movies.png" alt="icon_movies"></legend> <img class="character" src="/image/watchmovie.jpg" alt="watchmovie">
+                    <input type="radio" id="moviey" value="y" name="movie">
+                    <label for="moviey">Ja</label>
+                    <input type="radio" id="moviem" value="m" name="movie">
+                    <label for="moviem">Misschien</label>
+                    <input type="radio" id="movien" value="n" name="movie">
+                    <label for="movien">Nee</label>
+
+                    <legend>Roken <img class="icon" src="/image/icon_smoke.png" alt="icon_smoke"></legend> <img class="character" src="/image/smoke.jpg" alt="smoke">
+                    <input type="radio" id="smokey" value="y" name="smoke">
+                    <label for="smokey">Ja</label>
+                    <input type="radio" id="smokem" value="m" name="smoke">
+                    <label for="smokem">Misschien</label>
+                    <input type="radio" id="smoken" value="n" name="smoke">
+                    <label for="smoken">Nee</label>
+
+                    <legend>Sporten <img class="icon" src="/image/icon_sport.png" alt="icon_sport"></legend> <img class="character" src="/image/run.jpg" alt="sport">
+                    <input type="radio" id="sporty" value="y" name="sport">
+                    <label for="sporty">Ja</label>
+                    <input type="radio" id="sportm" value="m" name="sport">
+                    <label for="sportm">Misschien</label>
+                    <input type="radio" id="sportn" value="n" name="sport">
+                    <label for="sportn">Nee</label>
+
+                    <legend>Reizen <img class="icon" src="/image/icon_travel.png" alt="icon_travel"></legend> <img class="character" src="/image/travel.jpg" alt="travel">
+                    <input type="radio" id="travely" value="y" name="travel">
+                    <label for="travely">Ja</label>
+                    <input type="radio" id="travelm" value="m" name="travel">
+                    <label for="travelm">Misschien</label>
+                    <input type="radio" id="traveln" value="n" name="travel">
+                    <label for="traveln">Nee</label>
+                </fieldset>
+            </section>
+            <button>Submit</button>
+              <% } %>
+              <!-- <h2>Sorry u bent niet ingelogd!</h2> -->
+        </form>
+
+
+    </main>
+
+    <% include tail.ejs %>

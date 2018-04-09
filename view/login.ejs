@@ -1,0 +1,26 @@
+<% include head1.ejs %>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Index</a> </li>
+                <li><a href="/login">Login</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action=/login method=post>
+            <label>
+              Username
+              <input name="email">
+            </label>
+            <label>
+              Password
+              <input name="password" type="password">
+            </label>
+            <button>Log in</button>
+            <p>Nog geen account?
+                <br> Maak <a href="/makeprofile">hier</a> je account aan!</p>
+        </form>
+
+    </main>
+    <% include tail.ejs %>
