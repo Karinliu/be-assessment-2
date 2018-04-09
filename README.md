@@ -1,10 +1,16 @@
 # be-assessment-2
 
+## The product
+The product what is made is a datingsite. On the site u can 
+
 ## Installation
 Download or clone this document with the following command:
 `https://github.com/Karinliu/techproject.git`
 
 Run `npm install`
+
+## Using MYSQL
+Because
 
 ## Created database for new profile
 First I created a database.
