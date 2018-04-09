@@ -23,10 +23,3 @@ The EJS files can be found in the views document.
 After someone is registered, the data can be put in by the input type off the profile. Before the data can put in, u have to tell the table "hey, i want this column with the folowing data from u!". So I created a javascript file where the ejs files and the MYSQL table can be run. `see server.js`
 
 In the javascript file I wrote some code where the user can register into the site, can run the site, can delete a profile and log in. 
-
-
-package.json
-	profilepic/
-	profiles.txt
-	static/
-	view/
