@@ -12,7 +12,7 @@ My dating website `Find your match` is a site where users can match themselves b
 `• Characteristics` <br>
 `• Your own profile picture ` <br>
 
-finally the user need to fill in a short questionnaire where they can answer with `yes`, `maybe` or `no`. every question has its own icon. So when someone have filled the answer `yes` of `maybe`, the icon will appear by your own profile.
+At last, the user need to fill in a short questionnaire where they can answer with `yes`, `maybe` or `no`. Every question has its own icon. So when someone have filled the answer `yes` of `maybe`, the icon will appear beneath their profile.
 
 When you are looking at other peoples profile or someone is looking at your profile, you can easily see all the features that you have in common.
 
@@ -78,16 +78,16 @@ So to show some data to other users, I created a EJS file with the name `details
 So if you do that, it will say search in database `data` and give me the value from column `name`. 
 
 ## But how do we read the tables?!
-Like I said before, when someone is registered the data can be put in by the input type off the profile. But before the data can be seen in the templates, you have to tell the table "hey, i want this column with the folowing data from u!". So to do that we can create a javascript file where the ejs files and the MYSQL table can be run. `see server.js`
+Like I said before, when someone is registered the data can be put in with the input type off the profile. But before the data can be seen in the templates, you have to tell the table "hey, i want this column with the folowing data from u!". So to do that we can create a javascript file where the ejs files and the MYSQL table can be run. `see server.js`
 
-In the javascript file u can tell: "Hey I want to get some data from the database. Can you give me from database `data` the table `newprofile` the `name` column? And when you did that the table will be run into your website.
+In the javascript file u can tell: "Hey I want to get some data from the database. Can you give me from database `data` the table `newprofile` the `name` column? After that, the data will be run on your website.
 
 ## What next!
 Now we know how to make a database with columns, template EJS files where we can render in the data from the database and we created an Javascript file to run the database and tables. But how can we make it work on localhost?!
 
 To check if it works on localhost you have to open your terminal and open the document file `be-assessment-2`. Then you type in the following command: `npm start`. 
 
-After you have done that you can see that the created database is will be rendered into your templates on localhost!
+After you have done that, you can see that the created database will be rendered into your templates on localhost!
 
 ## Sources
 Push form. Hack Sparrow. (z.d.)
