@@ -1,6 +1,8 @@
 # be-assessment-2
 
 ## Dating website
+<img width="1280" alt="screenshot 2018-04-10 15 14 03" src="https://user-images.githubusercontent.com/32538678/38558999-21dd8dfc-3cd2-11e8-97c6-f40b21e98728.png">
+
 The website prototype is made with HTML, CSS and Javascript. 
 
 My dating website `Find your match` is a site where users can match themselves based on intrests. To use the website, they need to log in by creating an account. When the user is going to create an account, he/she  have to enter some data, for example: <br>
