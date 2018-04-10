@@ -1,7 +1,10 @@
 # be-assessment-2
 
-## The product
-The product what is made is a datingsite. On the site u can 
+## Dating website
+The website 
+
+
+An HTML/CSS/JS prototype for "LoveStory.nl"; a datingsite for writers, made on an express.js server with an MySQL database.
 
 ## Installation
 Download or clone this document with the following command:
