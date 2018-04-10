@@ -264,13 +264,12 @@ function remove (req, res, next) {
 // EDIT PROFILE
 function updateprofileForm(req, res, next){
   if (req.session.user) {
-        var user = req.session.user.email
+        var user = req.session.user
         connection.query('SELECT * FROM newprofile WHERE email = ?', user, done)
 
-        function done(err, data) {
-            res.render('updateprofile.ejs', {
-                data: data
-            })
+     function done(err, data) {
+        res.render('updateprofile.ejs', {
+        data: data })
         }
     } else {
         res.redirect("/login");
