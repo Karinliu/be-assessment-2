@@ -3,17 +3,89 @@
         <nav>
             <ul>
               <li><a href="/">Index</a> </li>
-                <% if (!user) { %>
-              <li><a href="/login">Login</a> </li>
-              <% } else { %>
-              <li class="myaccount"><a  href=" /updateprofile">My Account</a> </li>
+              <li><a href="/">Log uit</a> </li>
 
             </ul>
         </nav>
     </header>
     <main>
-        <!-- enctype = attribute specifies how the form-data should be encoded when submitting it to the server.  -->
-        <form action="/updateprofile" method="post">
+        <form action=/updateprofile method=post>
+            <fieldset>
+                <label> E-mail
+                    <input type="email" name="email" required> </label>
+                <label>Wachtwoord
+                    <input type="password" name="password" required> </label>
+            </fieldset>
+            <!-- STAP 2 -->
+            <fieldset>
+                <label> Naam en achternaam
+                    <input type="text" name="name" required> </label>
+                <label> Ik woon in
+                    <input type="text" name="place" required> </label>
+                <label> Beschrijving van mijzelf
+                    <textarea name="description"></textarea>
+                </label>
+                <label>Geboorte datum
+                    <input type="date" name="birthday" required> </label>
+            </fieldset>
+            <fieldset>
+                <legend>Ik ben</legend>
+                <input type="radio" id="female" value="f" name="gender" checked>
+                <label for="female"></label>
+                <input type="radio" id="male" value="m" name="gender">
+                <label for="male"></label>
+                <!-- <label for="lengte"></label>
+                    <input type="text" name="lengte" id="lengte" value="cm">  -->
+            </fieldset>
+            <fieldset>
+                <legend>Ik zoek</legend>
+                <input type="radio" id="findfemale" value="f" name="choosegender">
+                <label for="findfemale"></label>
+                <input type="radio" id="findmale" name="choosegender" value="m" checked>
+                <label for="findmale"></label>
+            </fieldset>
+            <!--       <fieldset>
+                <button>Volgende</button>
+            </fieldset> -->
+            <!-- STAP 3 -->
+            <fieldset>
+                <legend>Kies hieronder een aantal eigenschappen van uw zelf waar aan de match moet voldoen! </legend>
+                <label>
+                    <input type="checkbox" name="characteristics" value="avontuurlijk">Avontuurlijk</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="accuraat">Accuraat</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="loyaal">Loyaal</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="zorgzaam">Zorgzaam</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="openhartig">Openhartig</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="impulsief">Impulsief</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="assertief">Assertief</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="chaotisch">Chaotisch</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="zelfstandig">Zelfstandig</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="=ondernemend">Ondernemend</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="creatief">Creatief</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="romantisch">Romantisch</label>
+                <label>
+                    <input type="checkbox" name="characteristics" value="verlegen">Verlegen</label>
+            </fieldset>
+            <!-- STAP 4 -->
+            <fieldset>
+                <Legend>Upload uw profielfoto!</Legend>
+                <input type="file" name="profilepicture" accept="image/* "required>
+
+              </fieldset>
+
+            <section>
+              <hr>
 
                 <fieldset>
                     <legend>Huisdieren <img class="icon" src="/image/icon_animal.png" alt="icon_animals"></legend>
@@ -85,11 +157,6 @@
                 </fieldset>
             </section>
             <button>Submit</button>
-              <% } %>
-              <!-- <h2>Sorry u bent niet ingelogd!</h2> -->
         </form>
-
-
     </main>
-
     <% include tail.ejs %>
