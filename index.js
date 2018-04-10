@@ -45,6 +45,9 @@ express()
   .get('/:id', profile)
   .delete('/delete/:id',remove)
   .post('/delete/:id',remove)
+  .get('/updateprofile',updateprofileForm)
+  // .put('/updateprofile',updateprofile)
+  .get('/logout', logout)
   .use(notFound)
   .listen(8000)
 
@@ -63,8 +66,7 @@ express()
 
 function profile(req, res, next) {
   var id = req.params.id
-  connection.query(
-    'SELECT * FROM newprofile WHERE id = ?',
+  connection.query('SELECT * FROM newprofile WHERE id = ?',
     id,
     detail
   )
@@ -106,9 +108,8 @@ function loginForm(req, res) {
       .send('Gebruikersnaam of wachtwoord kloppen niet!')
     return
   }
-//Search in table new profile where the email is "..."
-  connection.query(
-    'SELECT * FROM newprofile WHERE email = ?',
+//Search in table newprofile where the email is "..."
+  connection.query('SELECT * FROM newprofile WHERE email = ?',
     email,
     done
   )
@@ -133,6 +134,7 @@ function loginForm(req, res) {
       //logged in!
       if (match) {
           req.session.user = {email: email.user}
+
           res.redirect('/')
       } else {
         res.status(401).send('Wachtwoord of email klopt niet')
@@ -149,7 +151,6 @@ function notFound(req, res) {
 
 //CREATE PROFILE (render the page with the form.)
 function makeprofileForm(req, res){
-  // req.url === '/makeprofile'
   res.render('makeprofile.ejs', {user: req.session.user
   })
 }
@@ -195,8 +196,7 @@ function makeprofile(req, res, next) {
     return
   }
 //Search if the email is already used.
-  connection.query(
-    'SELECT * FROM newprofile WHERE email = ?',
+  connection.query('SELECT * FROM newprofile WHERE email = ?',
     email,
     done
   )
@@ -261,7 +261,32 @@ function remove (req, res, next) {
     }
 }
 
+// EDIT PROFILE
+function updateprofileForm(req, res, next){
+  if (req.session.user) {
+        var user = req.session.user.email
+        connection.query('SELECT * FROM newprofile WHERE email = ?', user, done)
 
+        function done(err, data) {
+            res.render('updateprofile.ejs', {
+                data: data
+            })
+        }
+    } else {
+        res.redirect("/login");
+    }
+}
+
+
+function logout(req, res, next) {
+  req.session.destroy(function (err) {
+    if (err) {
+      next(err)
+    } else {
+      res.redirect('/')
+    }
+  })
+}
 
 
 //Bron push form: https://www.hacksparrow.com/form-handling-processing-in-express-js.html
