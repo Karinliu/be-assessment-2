@@ -14,7 +14,7 @@ My dating website `Find your match` is a site where users can match themselves b
 
 finally the user need to fill in a short questionnaire where they can answer with `yes`, `maybe` or `no`. every question has its own icon. So when someone have filled the answer `yes` of `maybe`, the icon will appear by your own profile.
 
-When you are looking at other peoples profile of someone is looking at your profile, you can easily see all the features that you have in common.
+When you are looking at other peoples profile or someone is looking at your profile, you can easily see all the features that you have in common.
 
 ## Prerequisites
 Before you can use this website u need to do the following thing:
